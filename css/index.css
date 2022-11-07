@@ -119,51 +119,39 @@ header {
   .dropdown-li:hover .dropdown-content {
     display:initial;
   }
-  
 
-  
-  /* .dropdown:hover, .dropdown-content, .dropdown-li {
-      display: block;
+  .header-menu-btn {
+    cursor: pointer;
+    display: block;
   }
 
 
-
-.dropdown {
-    float: right;
-    overflow: hidden;
-}
-
-.dropdown-content {
+  input[type=checkbox]  {
     display: none;
     position: absolute;
-    z-index: 1;
-    background-color: var(--gray-ish);
-    border-style:solid;
-    border-color: var(--red);
-}
+    float:right;
+    cursor: pointer;
+ }
+ 
 
-.dropdown-item {
-    list-style: none;
-
-}
-
-.dropdown-item a {
-    float: none;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: var(--green);
-} */
-
-.navbar-a:hover:not(.active),
-.phone-link:hover:not(.active) ,
+ .dropdown-menu {
+    display: none;
+ }
+ 
+ .navbar-a:hover:not(.active),
+.phone-link:hover:not(.active),
 .dropdown-item:hover:not(.active) {
-  background-color: var(--green-ish);
-  color: var(--red);
-}
+   background-color: var(--green-ish);
+   color: var(--red);
+ }
 
+ ​
 
-@media (max-width: 1380px) {
+@media (max-width:1380px) {
+
+    .flex-container {
+        flex-direction: column;
+      }
 
     .toggle-button {
         display: flex;
@@ -195,26 +183,29 @@ header {
     .navbar-links.active {
         display: flex;
     }
-
-   /* .dropdown {
-        float: none;
-    }
-
-    .dropdown-content {
-        position: relative;
-    }
-
-    .dropdown-li:hover, .dropdown, .dropdown-content {
+    
+      #toggle-menu {
+        display: none;
+      }
+      
+      #toggle-menu:checked ~ .dropdown-content {
         display: block;
-        width: 100%;
-        text-align: center;
-    } */
+      }
+      
+      #toggle-menu ~ label .hide {
+        display: none;
+      }
+      
+      #toggle-menu:checked ~ label .show {
+        display: none;
+      }
+      
+      #toggle-menu:checked ~ label .hide {
+        display: inline;
+      }
 
-
-    .flex-container {
-      flex-direction: column;
-    }
-  }
+    
+}
 
 
 
