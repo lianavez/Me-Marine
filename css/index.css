@@ -24,20 +24,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 7%;
   max-width: 100vw;
-  background-color: var(--white);
 }
 
-.logo {
-  margin: 0;
-  top: 0;
-  max-width: 8.8rem;
-}
-
-.navbar-links {
-    height: 100%;
-}
 
 .toggle-button {
     position: absolute;
@@ -62,7 +51,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vh;
+    max-width: 100vw;
+    padding: 0 7%;
+    background-color: var(--white);
+  }
+
+  .logo {
+    margin: 0;
+    top: 0;
+    max-width: 8.8rem;
+  }
+  
+  .navbar-links {
+      height: 100%;
   }
   
   .navbar-ul {
@@ -120,6 +121,13 @@ header {
     display:initial;
   }
 
+  .navbar-a:hover:not(.active),
+  .phone-link:hover:not(.active),
+  .dropdown-item:hover:not(.active) {
+     background-color: var(--green-ish);
+     color: var(--red);
+   }
+
   .header-menu-btn {
     cursor: pointer;
     display: block;
@@ -137,21 +145,8 @@ header {
  .dropdown-menu {
     display: none;
  }
- 
- .navbar-a:hover:not(.active),
-.phone-link:hover:not(.active),
-.dropdown-item:hover:not(.active) {
-   background-color: var(--green-ish);
-   color: var(--red);
- }
 
- ​
-
-@media (max-width:1380px) {
-
-    .flex-container {
-        flex-direction: column;
-      }
+@media screen and (max-width: 1380px) {
 
     .toggle-button {
         display: flex;
@@ -204,8 +199,12 @@ header {
         display: inline;
       }
 
-    
+      .flex-container {
+        flex-direction: column;
+      }
+
 }
+
 
 
 
