@@ -74,6 +74,7 @@ header {
     padding: 0;
     list-style: none;
     display: flex;
+    gap: 2rem;
   }
   
   .navbar-li {
@@ -97,7 +98,7 @@ header {
     position: absolute;
     right: 0;
     z-index: 1;
-    border-style:solid;
+    border-style: solid;
     border-color: var(--red);
     background-color: var(--gray-ish);
     display: none;
@@ -119,7 +120,7 @@ header {
   }
 
   .dropdown-li:hover .dropdown-content {
-    display:initial;
+     display:initial; 
   }
 
   .navbar-a:hover:not(.active),
@@ -136,7 +137,7 @@ header {
 
 
   input[type=checkbox]  {
-    display: none;
+   /* display: none; */
     position: absolute;
     float:right;
     cursor: pointer;
@@ -144,6 +145,10 @@ header {
  
 
  .dropdown-menu {
+    display: none;
+ }
+
+ .hide {
     display: none;
  }
 
@@ -168,6 +173,7 @@ header {
     .navbar-ul {
         width: 100%;
         flex-direction: column;
+        gap: 0;
     }
 
     .navbar-li {
@@ -184,25 +190,30 @@ header {
         display: flex;
     }
     
-      #toggle-menu {
+    input[type=checkbox] {
+       /* display: none; */
+
+      }
+      
+      .checkoption:checked ~ .dropdown-content {
+        display: initial;
+      }
+      
+      .checkoption ~ label .hide {
         display: none;
       }
       
-      #toggle-menu:checked ~ .dropdown-content {
-        display: block;
-      }
-      
-      #toggle-menu ~ label .hide {
+      .checkoption:checked ~ label .show {
         display: none;
       }
       
-      #toggle-menu:checked ~ label .show {
-        display: none;
-      }
-      
-      #toggle-menu:checked ~ label .hide {
+      .checkoption:checked ~ label .hide {
         display: inline;
       }
+
+      .dropdown-li:hover .dropdown-content {
+        display: none; 
+     }
 
       .flex-container {
         flex-direction: column;
