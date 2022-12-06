@@ -34,7 +34,6 @@ body {
 	min-height: 100%;
 }
 .container p {
-	font-family: 'Montserrat', sans-serif;
 	font-size: 1.2em;
 }
 
@@ -60,7 +59,7 @@ nav {
   font-family: 'Rouge Script', cursive;
 	font-size: 2.3em;
 	line-height: 70px;
-	color: #fff;
+	color: var(--gray-ish);
 }
 
 .logo span {
@@ -86,7 +85,7 @@ nav .nav-item > a {
 	display: inline-block;
 	padding: 0 0.9rem;
 	line-height: 70px;
-	color: #fff;
+	color: var(--gray-ish);
 	text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
@@ -120,7 +119,7 @@ nav .dropdown-menu {
 	margin-top: -.5em;
 	border: 1px solid rgba(0,0,0,.3);
 	border-radius: .1em;
-	background-color: #fff;
+	background-color: var(--gray-ish);
 }
 
 nav .dropdown.show .dropdown-menu {
@@ -131,7 +130,7 @@ nav .dropdown-item {
 	display: block;
 	padding: 0;
 	font-size: .815em;
-	color: #000;
+  color: black;
 	line-height: 3;
 	text-decoration: none;
   font-weight: bold;
@@ -153,7 +152,7 @@ nav .btn-hamburger span {
 	display: block;
 	width: 30px;
 	height: 4px;
-	background-color: #fff;
+	background-color: var(--gray-ish);
 	margin: 6px;
 	border-radius: 2px;
 	transition: .3s ease-in-out;
@@ -234,17 +233,23 @@ nav.opened .btn-hamburger span:nth-child(3) {
 
 
 
-.flex-container {
+.container {
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-items: center;
 }
 
 
 
-.about {
+.section {
   background-color: #adc178;
+  background-size: cover;
+  display: inline-block;
+}
+
+.footer-container {
+  width: 100vh;
+  background-color: var(--red-fade);
   background-size: cover;
   display: inline-block;
 }
