@@ -21,3 +21,4 @@ navToggle.addEventListener('click', () => {
     nav.classList.add('opened');
   }
 });
+
